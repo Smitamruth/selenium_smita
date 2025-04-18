@@ -1,0 +1,47 @@
+#### Page Object Model
+		-- maintains Web elements, locators and test methods.
+		-- Without POM pattern, there is duplication of elements/locators and updation is a challenge in case xpath is changeds.
+			Ex: for login, need only login page. But for search, need login and search pages.
+		-- If POM pattern is used, then the locators and test methods are divided into two different classes.
+			If there is change in xpath, it is done in locator class and also there is no duplication of elements.
+
+In POM pattern, we create one class for each page ==> Each page has its own dedicated class which contains the 
+	WEB/PAGE ELEMENTS+ ACTION METHODS present in the page.
+Ex: Login class contains WEB/PAGE ELEMENTS+ ACTION METHODS of Login page only and Search class contains 
+	WEB/PAGE ELEMENTS+ ACTION METHODS of search page only.
+Ex: Search page -- needs web elements from both login and search classes.
+		
+***********************************************************************************************************************************		  
+Steps:		  
+		  
+1) Identify the pages.
+2) Write separate class for each page.
+3) Create TestNG class which will have only test methods and validations. ==> The elements are accessed from PageObject class 
+	and call action methods which is used to perform validation.
+4) Test case ==> talks to Page Object class==> Action methods of Page object class ==> interacts with Page/web elements & 
+																					   performs corresponding actions on web page.
+5) Test cases contains only test methods and validations.
+ 
+ **********************************************************************************************************************************
+ 
+ Approaches to create Page Object Class:
+ 1) Without using PageFactory.
+ 2) Using PageFactory -- PageFactory.initElements(driver, this) in constructor & find elements using @FindBy(xpath="")  or @FindBy(how = How.XPATH, using = "").
+ 
+ **********************************************************************************************************************************
+ 
+ Workflow: 
+ XML ==> Test Case ==> Page Object Class ==> performs actions on Application.
+ 
+ **********************************************************************************************************************************
+ 
+ Any Page Object Class - contains 3 things:
+ 		1) Constructors - initiate driver
+ 		2) Locators - add xpaths, ids etc.
+ 		3) Action methods - locate elements and perform action.
+ 
+ constructor is written as this.driver = driver.
+ locators are written in a particular format -- By login = By.xapth("");
+ 												driver.findElement(login).sendKeys("");
+ 
+ 

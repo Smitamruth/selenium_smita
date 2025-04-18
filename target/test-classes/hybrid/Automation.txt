@@ -1,0 +1,128 @@
+#### Before planning automation -- we have to do TEST PLANNING ==> IDENTIFY SCENARIOS ==> WRITE TEST CASES ==> GET REVIEWS ==> GET SIGN OFF ==> 
+																			UPLOAD TEST CASES IN TOOL ==> DO FEW ROUNDS OF MANUAL TETSING.
+																			
+#### Once the build is stable, can move towards automation. Initial build can't be moved to automation.
+
+#### Can you do 100% automation????????   Ex: If we have 100 test cases(for ex) -- in which 90 are automatable and 10 are not. Then if we automate 90 completely then we have achieved 100% automation.
+Therefore 100% automation possible if considered the above scenario.
+
+#### Have you designed the automation framework?????? Since you're <5yrs exp, say that I have contributed to it by creating Utility classes, Page object classes etc.
+
+#### What is the process followed in MNCs???????
+Developer will develop the build and provide the instructions of how to install. i.e., BUILD INFO, STEPS, PROCEDURE etc. 
+Accordingly you will install in your QA environment in the server. 
+For the QA Testing team, dedicated testing server is available. So deploy the product in the server. 
+Through URL, everybody in the team will be able to access it.   
+
+
+#### src/test/java - contains test cases and src/test/resources - contains any resources that are needed to run the test cases like excel file, log4j, properties file etc.
+
+#### Logging - recording all the events in the form of text.
+	Log levels: All < Trace < Debug < Info < Error < Fatal < Off.
+	
+	Appenders - decides where to generate logs (Console/File)
+	Loggers - decides what type of logs generate ( All < Trace < Debug < Info < Error < Fatal < Off ).
+
+	Add log4j2.xml under src/test/resources.
+
+******************************************************************************************************************************************** 																			 
+	
+Automation Framework:
+1) We organize the automation project files/folder in structured & organised manner.
+2) Objectives - Maintainability, readability and re-usability.
+
+********************************************************************************************************************************************
+
+Types of frameworks:	
+1)Built-in frameworks -- already developed -- we just need to use features like Parallel testing, Parameterization, 
+						Data Providers, Annotations, Listeners, Grouping etc in TestNG Ex: Testng(purely for Java),
+						Junit(purely for Java), Cucumber(purely for Java), Robot etc.
+2)Customized(user-defined) -- on top of built-in frameworks, we add some more additional features to make it customized.
+						Ex: Modular framework, Data Driven, Keyword Driven, Hybrid Driven etc.
+
+********************************************************************************************************************************************
+
+Phases/Stages:
+	
+1) Analyzing the application under test(AUT) i.e., build created by developer. 
+		-- Like analyze the screens, 
+		-- No of pages, 
+		-- What/How /Type are the elements created in a page, 
+		-- What to automate and what cannot be automated.
+
+2) Choose test cases for automation -- cz not every test case can be automated (like verifying colors of page, font size, captchas, graphs and comparing images).
+		Criterion -- 
+			1)Sanity test cases -- P1 -- means BASIC FUNCTIONALITY test cases ==> if these cases get failed, can't proceed further. 
+			2)Data Driven Test cases/Re-tests -- P2 --  Test cases that require some data or where re-testing is required.
+			3)Regression test cases -- P2 -- Bugs raised are fixed by developer. After fixed, re-testing + other test cases possibly impacted by this change are tested. 
+			4)Other Test cases -- P3 -- any others which could be automated.
+			
+	Regression and Data Driven must be 100% automated.
+	
+3) Design and Development of Framework
+	--Sketch or blueprint -- like making folders for organized and structured manner of automation.
+	--Development means -- adding new utility files, creating page object classes etc.
+	
+4) Execution of test cases
+	-- locally - in eclipse
+	-- remotely - push code in remote repository and test the code taking it from some other place/Machine/environment/OS. ==> possible using Selenium GRID.
+			EX: Jenkins is a remote application -- which is a part of DEVOPS - part of CI environment. Jenkins pulls the code from GIT REPO and executes in remote machines.  
+
+5) Maintenance 
+	-- Having the code in one common place like local repo and remote repo.
+		-- Ex: local repo -- individual. End of day pushing code into remote repo.
+	-- Also once the code is available in the repo -- Jenkins CI tool automatically pulls the test cases from GITHUB repo and executes in their environment.
+	
+**********************************************************************************************************************************************************************************
+
+Automate an e-commerce application:
+
+	1) front end operations - customers/users can perform 
+			-- register/sign up
+			-- login/ signin
+			-- search product
+			-- Add/Edit/Delete products in the cart
+			-- Order products
+			-- Payment processes
+			-- Reviews.. etc.
+			
+	2) back end operations - admins/backend teams can perform
+			-- product info.
+			-- how many products there in store, only those should be visible in the front end.
+			-- how many customers are registered.
+			-- registered customers info.
+			-- Ordered products info
+			-- orders delivered/undelivered.
+			-- order status.
+			-- store info.
+			-- stock info in each store.
+			-- inventory management by generating reports.
+			-- most bought products 
+			-- Shipping info.
+			
+		Mainly Products info, Stores info, Customers info, Orders info.
+			
+*********************************************************************************************************************************
+
+Open cart - OpenCart is an online store management system developed by Hong-Kong–based OpenCart Limited. 
+			It is PHP-based, using MySQL, MariaDB, Percona Server or PostgreSQL database and HTML components.
+			Support is provided for different languages and currencies. 
+			It is freely available under the GNU General Public License.
+			
+Go to link of Open cart ==> CLick on Demo ==> You will see FRONT END & ADMINISTRATION.
+
+Ex: Register in front end app - 1st level testing at FRONT END - if its properly registered or not. 
+							  - 2nd level testing at BACK END - if its present in back end app or not.
+							  - 3rd level testing at DB level - if the data is present in DB or not.
+							  
+For automation use https://tutorialsninja.com/demo/index.php?route=account/login   -- its a free and open src project. Anybody can get it and host on their domain.
+																					-- can install in local system so that u can access DB.
+																					
+*********************************************************************************************************************************************	
+
+1) Create a maven project and add required dependencies in pom.xml 
+		like poi, poi-ooxml, log4j core, log4j-api, selenium-java, commons-io, extentreports, testng etc..
+2) Create a folder structure.
+3) Take each test case and start creating one after another.
+4)  
+									  							  
