@@ -38,7 +38,7 @@ public class KeyboardActionsDemo {
 																				// Then release the pressed key and perform the action to complete.
 		
 		//to press Ctrl+Shift+A
-		// act.keyDown(Keys.CONTROL).keyDown(Keys.SHIFT).sendKeys("A").keyUp(Keys.SHIFT).keyUp(Keys.CONTROL).perform();  	
+		act.keyDown(Keys.CONTROL).keyDown(Keys.SHIFT).sendKeys("A").keyUp(Keys.SHIFT).keyUp(Keys.CONTROL).perform();  	
 														// whichever key is performed last is released first. #####LIFO
 	}
 

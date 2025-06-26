@@ -34,10 +34,12 @@ public class JavascriptExecutorDemo {
 		js.executeScript("arguments[0].setAttribute('value','Smita')", wb); 		//arguments[0].setAttribute('value','Smita') ==> 
 																					// like getAttribute captures the value present in value attribute,
 																					// setAttribute puts the value in value attribute.
+		js.executeScript("arguments[0].style.border = '3px solid red'", wb);	// make border red..
 		
 	//workaround using JS for click().
 		WebElement radio = driver.findElement(By.xpath("//input[@id='female']"));
-		js.executeScript("arguments[0].click()", radio);							// arguments[0].click() ==> click(0 is JS method performed directly on webelement.
+		js.executeScript("arguments[0].click()", radio);							// arguments[0].click() ==> click(0 is JS method performed directly 
+																					// on webelement.
 		
 	}
 

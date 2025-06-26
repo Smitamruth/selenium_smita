@@ -3,9 +3,6 @@
 																			
 #### Once the build is stable, can move towards automation. Initial build can't be moved to automation.
 
-#### Can you do 100% automation????????   Ex: If we have 100 test cases(for ex) -- in which 90 are automatable and 10 are not. Then if we automate 90 completely then we have achieved 100% automation.
-Therefore 100% automation possible if considered the above scenario.
-
 #### Have you designed the automation framework?????? Since you're <5yrs exp, say that I have contributed to it by creating Utility classes, Page object classes etc.
 
 #### What is the process followed in MNCs???????

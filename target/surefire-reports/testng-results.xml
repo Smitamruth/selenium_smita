@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-23T13:51:49 IST" name="Surefire suite" finished-at="2025-04-23T13:51:50 IST" duration-ms="124">
+    <groups>
+      <group name="functional">
+        <method signature="PaymentTests.payByCard()[pri:1, instance:testng_programs.PaymentTests@1e802ef9]" name="payByCard" class="testng_programs.PaymentTests"/>
+        <method signature="PaymentTests.payByCOD()[pri:2, instance:testng_programs.PaymentTests@1e802ef9]" name="payByCOD" class="testng_programs.PaymentTests"/>
+        <method signature="PaymentTests.payByUPI()[pri:3, instance:testng_programs.PaymentTests@1e802ef9]" name="payByUPI" class="testng_programs.PaymentTests"/>
+      </group> <!-- functional -->
+      <group name="regression">
+        <method signature="PaymentTests.payByCard()[pri:1, instance:testng_programs.PaymentTests@1e802ef9]" name="payByCard" class="testng_programs.PaymentTests"/>
+        <method signature="SignupTests.signUpByEmail()[pri:1, instance:testng_programs.SignupTests@2b6faea6]" name="signUpByEmail" class="testng_programs.SignupTests"/>
+        <method signature="PaymentTests.payByCOD()[pri:2, instance:testng_programs.PaymentTests@1e802ef9]" name="payByCOD" class="testng_programs.PaymentTests"/>
+        <method signature="SignupTests.signUpByOTP()[pri:2, instance:testng_programs.SignupTests@2b6faea6]" name="signUpByOTP" class="testng_programs.SignupTests"/>
+        <method signature="PaymentTests.payByUPI()[pri:3, instance:testng_programs.PaymentTests@1e802ef9]" name="payByUPI" class="testng_programs.PaymentTests"/>
+        <method signature="SignupTests.signUpByFacebook()[pri:3, instance:testng_programs.SignupTests@2b6faea6]" name="signUpByFacebook" class="testng_programs.SignupTests"/>
+      </group> <!-- regression -->
+      <group name="sanity">
+        <method signature="LoginTests.loginByEmail()[pri:1, instance:testng_programs.LoginTests@48fa0f47]" name="loginByEmail" class="testng_programs.LoginTests"/>
+        <method signature="PaymentTests.payByCard()[pri:1, instance:testng_programs.PaymentTests@1e802ef9]" name="payByCard" class="testng_programs.PaymentTests"/>
+        <method signature="LoginTests.loginByOTP()[pri:2, instance:testng_programs.LoginTests@48fa0f47]" name="loginByOTP" class="testng_programs.LoginTests"/>
+        <method signature="PaymentTests.payByCOD()[pri:2, instance:testng_programs.PaymentTests@1e802ef9]" name="payByCOD" class="testng_programs.PaymentTests"/>
+        <method signature="LoginTests.loginByFacebook()[pri:3, instance:testng_programs.LoginTests@48fa0f47]" name="loginByFacebook" class="testng_programs.LoginTests"/>
+        <method signature="PaymentTests.payByUPI()[pri:3, instance:testng_programs.PaymentTests@1e802ef9]" name="payByUPI" class="testng_programs.PaymentTests"/>
+      </group> <!-- sanity -->
+    </groups>
+    <test started-at="2025-04-23T13:51:49 IST" name="Surefire test" finished-at="2025-04-23T13:51:50 IST" duration-ms="124">
+      <class name="testng_programs.SignupTests">
+        <test-method signature="signUpByEmail()[pri:1, instance:testng_programs.SignupTests@2b6faea6]" started-at="2025-04-23T13:51:50 IST" name="signUpByEmail" finished-at="2025-04-23T13:51:50 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpByEmail -->
+        <test-method signature="signUpByOTP()[pri:2, instance:testng_programs.SignupTests@2b6faea6]" started-at="2025-04-23T13:51:50 IST" name="signUpByOTP" finished-at="2025-04-23T13:51:50 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpByOTP -->
+        <test-method signature="signUpByFacebook()[pri:3, instance:testng_programs.SignupTests@2b6faea6]" started-at="2025-04-23T13:51:50 IST" name="signUpByFacebook" finished-at="2025-04-23T13:51:50 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpByFacebook -->
+      </class> <!-- testng_programs.SignupTests -->
+      <class name="testng_programs.LoginTests">
+        <test-method signature="loginByEmail()[pri:1, instance:testng_programs.LoginTests@48fa0f47]" started-at="2025-04-23T13:51:50 IST" name="loginByEmail" finished-at="2025-04-23T13:51:50 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginByEmail -->
+        <test-method signature="loginByOTP()[pri:2, instance:testng_programs.LoginTests@48fa0f47]" started-at="2025-04-23T13:51:50 IST" name="loginByOTP" finished-at="2025-04-23T13:51:50 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginByOTP -->
+        <test-method signature="loginByFacebook()[pri:3, instance:testng_programs.LoginTests@48fa0f47]" started-at="2025-04-23T13:51:50 IST" name="loginByFacebook" finished-at="2025-04-23T13:51:50 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginByFacebook -->
+      </class> <!-- testng_programs.LoginTests -->
+      <class name="testng_programs.PaymentTests">
+        <test-method signature="payByCard()[pri:1, instance:testng_programs.PaymentTests@1e802ef9]" started-at="2025-04-23T13:51:50 IST" name="payByCard" finished-at="2025-04-23T13:51:50 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- payByCard -->
+        <test-method signature="payByCOD()[pri:2, instance:testng_programs.PaymentTests@1e802ef9]" started-at="2025-04-23T13:51:50 IST" name="payByCOD" finished-at="2025-04-23T13:51:50 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- payByCOD -->
+        <test-method signature="payByUPI()[pri:3, instance:testng_programs.PaymentTests@1e802ef9]" started-at="2025-04-23T13:51:50 IST" name="payByUPI" finished-at="2025-04-23T13:51:50 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- payByUPI -->
+      </class> <!-- testng_programs.PaymentTests -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

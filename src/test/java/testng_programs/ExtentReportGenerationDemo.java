@@ -10,8 +10,6 @@ package testng_programs;
 
 //add external dependency in pom.xml
 
-//
-
 public class ExtentReportGenerationDemo {
 
 }
